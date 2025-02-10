@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "AvitoAndroidWinter"
 include(":app")
- 
+include(":domain")
+include(":data")
+include(":core")

@@ -2,4 +2,5 @@
     <string name="app_name">AvitoAndroidWinter</string>
     <string name="title_api_tracks">Поиск</string>
     <string name="title_local_tracks">Библиотека</string>
+    <string name="api_track_insert_track_name">Введите название песни</string>
 </resources>
