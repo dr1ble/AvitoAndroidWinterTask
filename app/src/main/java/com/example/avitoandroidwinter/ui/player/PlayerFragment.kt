@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.avitoandroidwinter.databinding.FragmentPlayerBinding
+import com.example.avitoandroidwinter.ui.apitracks.ApiTracksViewModel
+import com.example.avitoandroidwinter.ui.utils.daggerViewModel
 
 class PlayerFragment : Fragment() {
 
@@ -17,21 +19,17 @@ class PlayerFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private val viewModel: PlayerViewModel by daggerViewModel()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val playerViewModel =
-            ViewModelProvider(this)[PlayerViewModel::class.java]
 
         _binding = FragmentPlayerBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        playerViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 

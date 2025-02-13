@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.avitoandroidwinter.domain"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24
@@ -39,6 +39,8 @@ dependencies {
     implementation(libs.material)
     implementation(project(":core"))
     testImplementation(libs.junit)
+
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
